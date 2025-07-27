@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+header nav {
+    margin: 0px auto;
+    width: 70vw;
+    padding: 1rem 2rem;
+
+    /* flex properties */
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav a:hover {
+    color: #48cae4;
+}
+
+header nav ul {
+    list-style: none;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#brand-name {
+    font-weight: 600;
+}
+
+#brand-name a {
+    font-weight: 600;
+    color: #48cae4;
+}
+
+main {
+    width: 40vw;
+    /* border: 2px solid green; */
+    margin: 0px auto;
+}
+
+#hero {
+    margin-top: 10rem;
+}
+
+#hero h1 {
+    font-size: 4.5rem;
+    color: #343a40;
+}
+
+#hero h2 {
+    font-size: 3.5rem;
+    color: #6c757d;
+}
+
+
+#hero p:nth-of-type(1) {
+    color: #6c757d;
+}
+
+#hero p:nth-of-type(2) {
+    color: #6c757d;
+    margin: 1.5rem 0;
+    letter-spacing: 0.09rem;
+}
+
+#hero button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #48cae4;
+    color: white;
+}
+
+
+#hero button:hover {
+    cursor: pointer;
+}
+
+/* -----------------------------------About me section */
+
+#aboutme {
+    margin-top: 10rem;
+}
+
+#aboutme h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+#aboutme>p:nth-of-type(1) {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #6c757d;
+}
+
+#aboutme-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aboutme-grid div {
+    width: 300px;
+}
+
+#aboutme-grid div:nth-of-type(1) {
+    flex-basis: 45%;
+    border-color: blue;
+}
+
+#aboutme-grid div:nth-of-type(2) {
+    padding-left: 1.5rem;
+    flex-basis: 55%;
+}
+
+#aboutme-grid div img {
+    width: 100%;
+    border-radius: 10px;
+    height: 350px;
+}
+
+
+@media screen and (width<=1200px) {
+    main {
+        width: 50%;
+    }
+     #aboutme-grid div:nth-of-type(1) {
+        flex-basis: 50%;
+    }
+
+    #aboutme-grid div:nth-of-type(2) {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (width<=1500px) {
+    main {
+        width: 60%;
+    }
+}
+
+
+
+@media screen and (width<=900px) {
+    main {
+        width: 80%;
+    }
+
+    #aboutme-grid div:nth-of-type(1) {
+        flex-basis: 100%;
+    }
+
+    #aboutme-grid div:nth-of-type(2) {
+        flex-basis: 100%;
+    }
+
+}
