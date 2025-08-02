@@ -94,13 +94,13 @@ main {
     margin-top: 10rem;
 }
 
-#aboutme h2 {
+.section-heading {
     font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
 }
 
-#aboutme>p:nth-of-type(1) {
+.section-subheading {
     text-align: center;
     margin: 1.5rem 0;
     color: #6c757d;
@@ -111,9 +111,6 @@ main {
     flex-wrap: wrap;
 }
 
-#aboutme-grid div {
-    width: 300px;
-}
 
 #aboutme-grid div:nth-of-type(1) {
     flex-basis: 45%;
@@ -121,14 +118,68 @@ main {
 }
 
 #aboutme-grid div:nth-of-type(2) {
-    padding-left: 1.5rem;
+    padding: 0 4rem;
     flex-basis: 55%;
+    color: gray;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
 }
 
 #aboutme-grid div img {
     width: 100%;
     border-radius: 10px;
     height: 350px;
+}
+
+
+#aboutme-grid div button{
+    margin-top: 1rem;
+    padding: 0.6rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #48cae4;
+    color: white;
+}
+
+
+
+
+/* Skills Section */
+
+#skills{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#skills-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills-grid div{
+    width: 150px;
+    flex-basis: 25%;
+}
+
+#skills-grid div svg{
+    margin: 1rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+#skills-grid div svg:hover{
+    box-shadow: 0 3px 10px black;
+}
+
+/* mobile first design */
+/* desktop first design */
+
+@media screen and (width<=1500px) {
+    main {
+        width: 60%;
+    }
 }
 
 
@@ -143,14 +194,8 @@ main {
     #aboutme-grid div:nth-of-type(2) {
         flex-basis: 50%;
     }
+    
 }
-
-@media screen and (width<=1500px) {
-    main {
-        width: 60%;
-    }
-}
-
 
 
 @media screen and (width<=900px) {
@@ -166,4 +211,10 @@ main {
         flex-basis: 100%;
     }
 
+   #aboutme-grid div:nth-of-type(2){
+        padding: 0 1rem;
+   }
+    #skills-grid div{
+        flex-basis: 50%;
+    }
 }
