@@ -1,0 +1,3 @@
+1. Learn about Event Delegation
+2. Library vs Framework
+3. Learn what are the philosophies of react and how it is different from other UI Frameworks such as Angular, vue, ember etc.
