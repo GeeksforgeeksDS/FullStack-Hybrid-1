@@ -10,6 +10,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/bazaar-db')
     .catch((err) => console.log(err));
 
 
+// Schema  
 const productSchema = new mongoose.Schema({
     title: String,
     price: Number,
