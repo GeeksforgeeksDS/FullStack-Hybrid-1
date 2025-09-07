@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router';
 
 const UserContex = createContext({
     login: () => { },
-    logout: ()=>{},
+    logout: () => { },
     isLoggedIn: false,
     user: null,
     cart: [],
@@ -47,7 +47,6 @@ export const UserContextProvider = (props) => {
             }
         })
             .then((res) => {
-                console.log(res.data);
                 setUser(res.data);
                 setIsLoggedIn(true);
             }).catch((err) => {

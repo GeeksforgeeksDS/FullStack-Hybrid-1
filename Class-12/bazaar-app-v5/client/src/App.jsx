@@ -8,8 +8,14 @@ import SignUp from './pages/SignUp';
 import Cart from './pages/Cart';
 import { Toaster } from 'react-hot-toast';
 import ShowProduct from './pages/ShowProduct';
+import PrivateRoutes from './components/PrivateRoutes';
+import { useContext } from 'react';
+import UserContex from './store/user-context';
 
 function App() {
+
+    const { isLoggedIn } = useContext(UserContex);
+
     return (
         <Fragment>
             <Navbar />
@@ -19,7 +25,9 @@ function App() {
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<SignUp />} />
                 <Route path='/cart' element={<Cart />} />
-                <Route path='/products/:productId' element={<ShowProduct />} />
+                <Route element={<PrivateRoutes isLoggedIn={ isLoggedIn } />}>
+                    <Route path='/products/:productId' element={<ShowProduct />} />
+                </Route>
             </Routes>
         </Fragment>
     )

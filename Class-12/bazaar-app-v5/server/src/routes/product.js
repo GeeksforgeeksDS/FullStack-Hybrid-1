@@ -11,7 +11,7 @@ router.get('/', getAllProducts);
 router.post('/', createProduct);
 
 // Show a product
-router.get('/:productId',isLoggedIn, getSingleProduct)
+router.get('/:productId', isLoggedIn, getSingleProduct);
 
 // update a product
 router.patch('/:productId', updateProduct);
